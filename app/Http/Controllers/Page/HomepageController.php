@@ -227,7 +227,7 @@ class HomepageController extends Controller
     public function formulario_diseno(Request $request)
     {
 
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -308,7 +308,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact'], [
                     'category_all' => $category_all,
@@ -327,7 +327,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -342,7 +342,7 @@ class HomepageController extends Controller
     public function formulario_detail(Request $request)
     {
 
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -418,7 +418,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
                     'category_all' => $category_all,
@@ -437,7 +437,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -656,10 +656,10 @@ class HomepageController extends Controller
         SEOMeta::setCanonical("https://gotoperu.com.mx/blog");
 
         $posts=TBlog_post::with(['user','categoria','imagenes'])->paginate(5);
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -678,11 +678,11 @@ class HomepageController extends Controller
         $categoria_aux=TBlog_categoria::where('nombre',$categoria)->first();
         $posts = TBlog_post::with(['user', 'imagenes', 'categoria'])
             ->where('categoria_id',$categoria_aux->id)->paginate(5);
-        
-        $categorias_aux = TBlog_categoria::get(); 
+
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -712,10 +712,10 @@ class HomepageController extends Controller
         }
         SEOMeta::setCanonical("https://gotoperu.com.mx/blog/".$url);
 
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -731,12 +731,12 @@ class HomepageController extends Controller
             ->take(3)
             ->with(['user','categoria','imagenes'])
             ->get();
-        
+
         return view('page.blogDetail', compact('post','categorias','recentPosts','postsRelacionados','seo'));
     }
-    
+
     public function zoom(Request $request){
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
         $nombre=$request->t_nombre;
         $celular = $request->t_celular;
         $email=$request->t_email;
@@ -747,7 +747,7 @@ class HomepageController extends Controller
                 $messaje->to($email, $nombre)
                     ->subject('GotoPeru')
                     /*->attach('ruta')*/
-                    ->from('mexico@gotoperu.com', 'GotoPeru');
+                    ->from('chile@gotoperu.com', 'GotoPeru');
             });
             Mail::send(['html' => 'notifications.page.contact-zoom'], [
                 'nombre'=>$nombre,
@@ -760,7 +760,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru - Cita Zoom')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
             return redirect('/formularioZoom')->with('status', 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.');;
