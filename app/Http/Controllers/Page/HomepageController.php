@@ -640,10 +640,10 @@ class HomepageController extends Controller
         SEOMeta::setCanonical("https://gotoperu.cl/blog");
 
         $posts=TBlog_post::with(['user','categoria','imagenes'])->paginate(5);
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -662,11 +662,11 @@ class HomepageController extends Controller
         $categoria_aux=TBlog_categoria::where('nombre',$categoria)->first();
         $posts = TBlog_post::with(['user', 'imagenes', 'categoria'])
             ->where('categoria_id',$categoria_aux->id)->paginate(5);
-        
-        $categorias_aux = TBlog_categoria::get(); 
+
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -696,10 +696,10 @@ class HomepageController extends Controller
         }
         SEOMeta::setCanonical("https://gotoperu.cl/blog/".$url);
 
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -715,10 +715,10 @@ class HomepageController extends Controller
             ->take(3)
             ->with(['user','categoria','imagenes'])
             ->get();
-        
+
         return view('page.blogDetail', compact('post','categorias','recentPosts','postsRelacionados','seo'));
     }
-    
+
     public function zoom(Request $request){
         $from = 'chile@gotoperu.com';
         $nombre=$request->t_nombre;
