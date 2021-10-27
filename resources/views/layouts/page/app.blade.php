@@ -65,11 +65,17 @@
 {{--                                </li>--}}
                                 <li class="item">
                                     <div class="social-links">
-                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-" loading="lazy"> </a>
+                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="peru" width="40" class="w-" loading="lazy"> </a>
                                     </div>
                                     <div class="social-info">
                                         <a href="tel:51960680005">+51 960 680 005</a>
                                     </div>
+                                </li>
+                                <li class="item">
+                                    <div class="my-auto">
+                                        <a href=""> <img src="{{asset('images/chile.png')}}" alt="chile" width="50"  loading="lazy"> </a>
+                                    </div>
+                                    
                                 </li>
                             </ul>
                         </div>
@@ -124,11 +130,10 @@
                         <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Ciudad del Cusco</p>
                     </div>
                     <div class="col">
-                        <h6 class="text-white font-weight-bold">MÉXICO</h6>
+                        <h6 class="text-white font-weight-bold">CHILE</h6>
                         <div class="line-subtitle"></div>
-                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Avenida Rio Churubusco 601</p>
-                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Xoco</p>
-                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Coyoacán, Ciudad de México 03330</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Juan de Valiente 3630</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Vitacura Santiago de Chile 7630000</p>
                     </div>
                     <div class="col">
                         <h6 class="text-white font-weight-bold">Compartir en:</h6>

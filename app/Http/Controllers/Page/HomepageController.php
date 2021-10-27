@@ -31,13 +31,14 @@ class HomepageController extends Controller
     public function index(){
 
         //SEO
-        SEOMeta::setTitle('Paquetes de Viajes y Tour a Machu Picchu en Perú 2021');
-        SEOMeta::setDescription('¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú');
-        SEOMeta::setCanonical('https://gotoperu.com.mx/');
+        SEOMeta::setTitle('Paquetes turísticos y tour a Machu Picchu-Perú desde Chile 2021');
+        SEOMeta::setDescription('Encuentra tu paquete turístico económico a Peru, Cusco, Valle Sagrado o Machu Picchu desde Chile. Disfruta los mejores tours planificados por expertos operadores');
+        
+        SEOMeta::setCanonical('https://gotoperu.cl/');
 
         OpenGraph::setDescription('¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú');
         OpenGraph::setTitle('Paquetes de Viajes y Tour a Machu Picchu en Perú 2021');
-        OpenGraph::setUrl('https://gotoperu.com.mx/');
+        OpenGraph::setUrl('https://gotoperu.cl/');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
@@ -227,7 +228,7 @@ class HomepageController extends Controller
     public function formulario_diseno(Request $request)
     {
 
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -308,7 +309,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact'], [
                     'category_all' => $category_all,
@@ -327,7 +328,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -342,7 +343,7 @@ class HomepageController extends Controller
     public function formulario_detail(Request $request)
     {
 
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -418,7 +419,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
                     'category_all' => $category_all,
@@ -437,7 +438,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -449,13 +450,13 @@ class HomepageController extends Controller
     }
 
     public function packages(){
-        SEOMeta::setTitle('Paquetes Turísticos a Machu Picchu 2021/2022 | Go To Perú');
-        SEOMeta::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱');
-        SEOMeta::setCanonical('https://gotoperu.com.mx/packages');
+        SEOMeta::setTitle('Paquetes Turísticos a Machu Picchu, Perú 2021/2022 | GOTOPERU');
+        SEOMeta::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores, Arequipa, Cusco, Lima para parejas, familias. Desde Chile ¡Perú 2021!⛱');
+        SEOMeta::setCanonical('https://gotoperu.cl/packages');
 
         OpenGraph::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱');
         OpenGraph::setTitle('Paquetes Turísticos a Machu Picchu 2021/2022 - Go To Perú');
-        OpenGraph::setUrl('https://gotoperu.com.mx/packages');
+        OpenGraph::setUrl('https://gotoperu.cl/packages');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
@@ -483,11 +484,11 @@ class HomepageController extends Controller
         }else{
             SEOMeta::setTitle($paquete->first()->titulo);
             SEOMeta::setDescription("");
-            SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
+            SEOMeta::setCanonical("https://gotoperu.cl/paquetes/".$url);
 
             OpenGraph::setDescription("");
             OpenGraph::setTitle($paquete->first()->titulo);
-            OpenGraph::setUrl("https://gotoperu.com.mx/paquetes/".$url);
+            OpenGraph::setUrl("https://gotoperu.cl/paquetes/".$url);
             OpenGraph::addProperty('type','website');
             OpenGraph::addImage($paquete->first()->imagen, ['height' => 280, 'width' => 420]);
 
@@ -517,13 +518,13 @@ class HomepageController extends Controller
     public function destination(){
         //$destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
         //seo
-        SEOMeta::setTitle('Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru');
-        SEOMeta::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú.');
-        SEOMeta::setCanonical('https://gotoperu.com.mx/destination');
+        SEOMeta::setTitle('Tours, Destinos Turísticos en Perú 2021/2022 | GOTOTPERU');
+        SEOMeta::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos más resltamtes del Perú.');
+        SEOMeta::setCanonical('https://gotoperu.cl/destination');
 
         OpenGraph::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú.');
         OpenGraph::setTitle('Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru');
-        OpenGraph::setUrl('https://gotoperu.com.mx/destination');
+        OpenGraph::setUrl('https://gotoperu.cl/destination');
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
@@ -534,23 +535,6 @@ class HomepageController extends Controller
 
 
     public function destination_show($url){
-
-
-        SEOMeta::setTitle($url);
-        SEOMeta::setDescription('This is my page description');
-        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
-
-        OpenGraph::setDescription('This is my page <br>description</b>');
-        OpenGraph::setTitle('Home');
-        OpenGraph::setUrl('http://current.url.com');
-        OpenGraph::addProperty('type', 'articles');
-
-        TwitterCard::setTitle('Homepage');
-        TwitterCard::setSite('@LuizVinicius73');
-
-        JsonLd::setTitle('Homepage');
-        JsonLd::setDescription('This is my page description');
-        JsonLd::addImage('https://codecasts.com.br/img/logo.jpg');
 
         $destino = TDestino::where('url', $url)->get();
         $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes', 'paquetes_categoria.categoria')->get();
@@ -582,11 +566,11 @@ class HomepageController extends Controller
         }else{
             SEOMeta::setTitle($destino->first()->nombre);
             SEOMeta::setDescription("");
-            SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
+            SEOMeta::setCanonical("https://gotoperu.cl/destination/".$url);
 
             OpenGraph::setDescription("");
             OpenGraph::setTitle($destino->first()->nombre);
-            OpenGraph::setUrl("https://gotoperu.com.mx/destination/".$url);
+            OpenGraph::setUrl("https://gotoperu.cl/destination/".$url);
             OpenGraph::addProperty('type','website');
             OpenGraph::addImage($destino->first()->imagen, ['height' => 900, 'width' => 800]);
         }
@@ -597,9 +581,9 @@ class HomepageController extends Controller
     public function sobre_nosotros(){
         $team = TTeam::all();
         //seo
-        $titulo="Agencia de Viajes y Turismo a Machu Picchu Desde México | GoToPeru";
+        $titulo="Agencia de Viajes y Turismo a Machu Picchu Desde Chile | GOTOPERU";
         $descripcion="En GoToPeru⛱ Somos una Agencia de Viajes y Especialistas en Paquetes Turísticos en Perú.";
-        $url="https://gotoperu.com.mx/sobre-nosotros";
+        $url="https://gotoperu.cl/sobre-nosotros";
 
         SEOMeta::setTitle($titulo);
         SEOMeta::setDescription($descripcion);
@@ -623,7 +607,7 @@ class HomepageController extends Controller
         //seo
         $titulo="Responsabilidad Social | GotoPeru 2021/2022";
         $descripcion="En GotoPeru estamos Comprometidos con la Responsabilidad Social y Parte de Nuestra Actividad Turística nos Identifica Con Nuestra Gente en Cusco y Peru.";
-        $url="https://gotoperu.com.mx/responsabilidad-social";
+        $url="https://gotoperu.cl/responsabilidad-social";
 
         SEOMeta::setTitle($titulo);
         SEOMeta::setDescription($descripcion);
@@ -653,7 +637,7 @@ class HomepageController extends Controller
         //seo
         SEOMeta::setTitle("Blog");
         SEOMeta::setDescription("");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/blog");
+        SEOMeta::setCanonical("https://gotoperu.cl/blog");
 
         $posts=TBlog_post::with(['user','categoria','imagenes'])->paginate(5);
         $categorias_aux = TBlog_categoria::get(); 
@@ -673,7 +657,7 @@ class HomepageController extends Controller
         //seo
         SEOMeta::setTitle($categoria);
         SEOMeta::setDescription("");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/blog/categoria/".$categoria);
+        SEOMeta::setCanonical("https://gotoperu.cl/blog/categoria/".$categoria);
 
         $categoria_aux=TBlog_categoria::where('nombre',$categoria)->first();
         $posts = TBlog_post::with(['user', 'imagenes', 'categoria'])
@@ -710,7 +694,7 @@ class HomepageController extends Controller
         }else{
             SEOMeta::setTitle($post->titulo);
         }
-        SEOMeta::setCanonical("https://gotoperu.com.mx/blog/".$url);
+        SEOMeta::setCanonical("https://gotoperu.cl/blog/".$url);
 
         $categorias_aux = TBlog_categoria::get(); 
         $categorias = collect();
@@ -736,7 +720,7 @@ class HomepageController extends Controller
     }
     
     public function zoom(Request $request){
-        $from = 'mexico@gotoperu.com';
+        $from = 'chile@gotoperu.com';
         $nombre=$request->t_nombre;
         $celular = $request->t_celular;
         $email=$request->t_email;
@@ -747,7 +731,7 @@ class HomepageController extends Controller
                 $messaje->to($email, $nombre)
                     ->subject('GotoPeru')
                     /*->attach('ruta')*/
-                    ->from('mexico@gotoperu.com', 'GotoPeru');
+                    ->from('chile@gotoperu.com', 'GotoPeru');
             });
             Mail::send(['html' => 'notifications.page.contact-zoom'], [
                 'nombre'=>$nombre,
@@ -760,7 +744,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru - Cita Zoom')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('chile@gotoperu.com', 'GotoPeru');
                 });
 
             return redirect('/formularioZoom')->with('status', 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.');;

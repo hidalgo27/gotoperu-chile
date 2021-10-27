@@ -67,6 +67,7 @@
                   <p style="margin-top:0;margin-bottom:12px;font-weight: 600;TEXT-ALIGN:CENTER">OPERADORA DE VIAJES<BR><span style="font-weight: 500;font-size:11px">FUNDADA EN 2011</span></p>
                   <p style="padding:0 5px;font-weight: 600;font-size:13px;line-height:18px">
                     <a href="https://gotoperu.com/" target="_blank" style="color:#6c757d;text-decoration:none">- gotoperu.com</a><br>
+                    <a href="https://gotoperu.cl/" target="_blank" style="color:#6c757d;text-decoration:none">- gotoperu.cl</a><br>
                     <a href="https://gotoperu.co/" target="_blank" style="color:#6c757d;text-decoration:none">- gotoperu.co</a><br>
                     <a href="https://gotoperu.com.mx/" target="_blank" style="color:#6c757d;text-decoration:none">- gotoperu.com.mx</a>
                   </p>
