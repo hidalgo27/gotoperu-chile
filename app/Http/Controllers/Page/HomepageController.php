@@ -12,6 +12,7 @@ use App\TPaqueteDificultad;
 use App\TTeam;
 use App\TTour;
 use App\TSeo;
+use App\Faq;
 use App\TBlog_post;
 use App\TBlog_categoria;
 use Illuminate\Http\Request;
