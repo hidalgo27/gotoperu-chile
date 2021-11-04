@@ -657,7 +657,23 @@ class HomepageController extends Controller
 
         return view('page.responsabilidad');
     }
-
+    public function reservarConNosotros(){
+        SEOMeta::setTitle("¿Por qué reservar con nosotros? - GOTOPERU");
+        return view('page.reservarConNosotros');
+    }
+    public function viajeConfianza(){
+        SEOMeta::setTitle("Viaje con confianza - GOTOPERU");
+        return view('page.viajeConfianza');
+    }
+    public function condiciones(){
+        SEOMeta::setTitle("Términos y condiciones de reserva - GOTOPERU");
+        return view('page.condiciones');
+    }
+    public function preguntas(){
+        SEOMeta::setTitle("Preguntas frecuentes - GOTOPERU");
+        $faqs=Faq::get();
+        return view('page.preguntas',compact('faqs'));
+    }
     public function callback(Request $request){
         return $request;
     }
