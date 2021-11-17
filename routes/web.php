@@ -138,6 +138,15 @@ Route::get('/preguntas-mas-frecuentes', [
     'uses' => 'Page\HomepageController@preguntas',
     'as' => 'preguntas_path',
 ]);
+//hotel
+Route::get('/hoteles', [
+    'uses' => 'Page\HomepageController@hotel',
+    'as' => 'hotel_path',
+]);
+Route::get('/hoteles/{url}', [
+    'uses' => 'Page\HomepageController@hotelDestino',
+    'as' => 'hotelDestino_path',
+]);
 //auth/callback
 Route::get('/auth/callback', [
     'uses' => 'Page\HomepageController@callback',
