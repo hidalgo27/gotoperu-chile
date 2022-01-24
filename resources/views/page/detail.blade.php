@@ -339,7 +339,7 @@
                                 <thead class="thead-dark">
                                     <tr class="text-center">
                                         <th scope="col">Económico</th>
-                                        <th scope="col">Normal</th>
+                                        <th scope="col">Turista</th>
                                         <th scope="col">Superior</th>
                                         <th scope="col">Lujo</th>
                                     </tr>

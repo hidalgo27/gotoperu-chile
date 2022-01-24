@@ -50,7 +50,7 @@
                 {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy" loading="lazy">--}}
                 {{--                    </div>--}}
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-4 text-g-yellow">Estilo de viajes y<br><strong class="text-g-green"> Paquetes a Machu Picchu 2021</strong></h2>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes de<br><strong class="text-g-green"> viajes en Perú</strong></h2>
                     <p class="lead font-weight-normal text-muted">Expertos operadores en los destinos más representativos en el sur del Perú, diseñamos viajes y paquetes turísticos en Cusco, Machu Picchu en grupos, y en parajes para dos personas y servicios todo incluido. En GotoPeru compartimos lo mejor de nuestra herencia ¡nuestra cultura!, realiza tu próximo viaje de aventura para conocer la emblemática ciudadela de Machu Picchu.</p>
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
